@@ -40,9 +40,7 @@ deactivate
 ```
 python -m serial.tools.list_ports
 
-python3 ./src/cli.py list
+PYTHONPATH=./:$PYTHONPATH python3 ./cli.py /dev/cu.usbmodem101 led_on
 
-python3 ./src/cli.py run --port /dev/cu.usbmodem101 led_on
-
-python3 ./src/cli.py run --port /dev/cu.usbmodem101 led_off
+PYTHONPATH=./:$PYTHONPATH python3 ./cli.py /dev/cu.usbmodem101 led_off
 ```

@@ -101,6 +101,8 @@ void process_request(JsonDocument& request) {
 
 void setup() {
   Serial.begin(SERIAL_BAUD);
+
+  send_result(0, "builtin LED management");
 }
 
 
